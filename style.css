@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "sprat";
+    src: url("font/Sprat_Variable.ttf");
+}
+
+@font-face {
+    font-family: "minipax";
+    src: url("font/Sprat_Variable.ttf");
+}
+
+body {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    /* background-image: radial-gradient( ellipse farthest-corner at 10px 10px, #c4c48d, #c4c48d 50%, #e5e5f7 50%); */
+    opacity: 1;
+    background-size: 10px 10px;
+    font-family: "sprat";
+    background: url(images/13-harelip-sucker.png) no-repeat;
+    background-position: center bottom;
+    background-size: 65% auto;
+    font-variation-settings: "wdth" 0, "wght" 70;
+}
+
+body::after {
+    content: position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: -1;
+}
+
+.titre {
+    text-align: center;
+    font-size: 150px;
+    font-size: clamp(2rem, 14vw, 8em);
+    font-family: "sprat";
+    font-variation-settings: "wdth" 0, "wght" 70;
+    float: left;
+    margin: 0;
+    clear: left;
+    text-transform: uppercase;
+    line-height: .8;
+}
+
+
+/* CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-size: 18px;
+    padding: 50px;
+    margin: 0;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    font-size: 1.6em;
+}
+
+li:nth-child(2n) {
+    font-variation-settings: "wdth" 0, "wght" 120;
+}
+
+article {
+    /* par défaut, les popups sont masquées */
+    display: none;
+    position: absolute;
+    /* pour la rendre déplaçable */
+    /* position d’ouverture */
+    top: 50%;
+    left: 50%;
+    /* centrage */
+    transform: translate(-50%, -50%);
+    /* style visuel */
+    border: 5px double;
+    background-color: rgb(163, 165, 144);
+    padding: 1em;
+    max-width: 30em;
+}
+
+article p {
+    margin: 0 0 1em 0;
+    padding-right: .5em;
+}
+
+
+/* quand la popup a la class “open” */
+
+article.open {
+    display: block;
+}
+
+
+/* styles du bouton close */
+
+.close {
+    position: absolute;
+    right: -.5em;
+    border: 5px double;
+    top: -.5em;
+    background: rgb(0, 0, 0);
+    background-color: rgb(163, 165, 144);
+    color: black;
+    font-size: 1.25em;
+    line-height: .7;
+    padding: 4px 6px 6px;
+}
+
+img {
+    max-width: 100%;
+}
+
+article {
+    font-size: 14px;
+}
+
+nav {
+    font-family: ;
+}
